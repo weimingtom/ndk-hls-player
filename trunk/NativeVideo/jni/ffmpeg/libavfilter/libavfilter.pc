@@ -1,0 +1,14 @@
+prefix=../output
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 3.62.100
+Requires: libpostproc = 52.3.100, libswresample = 0.17.102, libswscale = 2.2.100, libavformat = 55.4.100, libavcodec = 55.6.100, libavutil = 52.27.101
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavfilter -lm -lz
+Libs.private: 
+Cflags: -I${includedir}
